@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.1.8/aframe/build/aframe-ar.js"></script>
+
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | ARDraw</title>
@@ -8,6 +11,15 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+    <a-scene embedded arjs>
+      <!-- Set Up AR Scene -->
+      <a-marker preset="hiro">
+          <a-entity unity-webgl="targetName: ARDraw"></a-entity>
+      </a-marker>
+      <!-- Camera Configuration -->
+      <a-camera-static></a-camera-static>
+  </a-scene>
+
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">

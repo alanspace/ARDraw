@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Your Unity AR App</title>
+    <!-- Include AR.js and A-Frame Scripts -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.1.8/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <a-scene embedded arjs>
+        <!-- Set Up AR Scene -->
+        <a-marker preset="hiro">
+            <a-entity unity-webgl="targetName: ARDraw"></a-entity>
+        </a-marker>
+
+        <!-- Camera Configuration -->
+        <a-camera-static></a-camera-static>
+    </a-scene>
+</body>
+</html>
