@@ -11,14 +11,7 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-    <a-scene embedded arjs>
-      <!-- Set Up AR Scene -->
-      <a-marker preset="hiro">
-          <a-entity unity-webgl="targetName: ARDraw"></a-entity>
-      </a-marker>
-      <!-- Camera Configuration -->
-      <a-camera></a-camera>
-  </a-scene>
+    
 
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
@@ -35,6 +28,16 @@
         <div id="unity-build-title">ARDraw</div>
       </div>
     </div>
+
+    <a-scene embedded arjs>
+      <!-- Set Up AR Scene -->
+      <a-marker preset="hiro">
+          <a-entity unity-webgl="targetName: ARDraw"></a-entity>
+      </a-marker>
+      <!-- Camera Configuration -->
+      <a-camera></a-camera>
+  </a-scene>
+  
     <script>
 
       var container = document.querySelector("#unity-container");
